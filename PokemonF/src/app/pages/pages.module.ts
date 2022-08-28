@@ -6,13 +6,16 @@ import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
+    HomeComponent,
   ],
   exports: [
     PagesComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

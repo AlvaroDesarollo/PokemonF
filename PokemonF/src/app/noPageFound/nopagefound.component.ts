@@ -11,6 +11,7 @@ export class NopagefoundComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('aqui llega');
   }
 
 }

@@ -58,7 +58,6 @@ export class HomeComponent implements OnInit {
 
   detalle(pokemon: any) {
     this.peticionesService.getPokemons(pokemon.id).subscribe((data) => {
-      console.log('response pokemones::::', data);
       this.globalService.dataPokemon = data;
       this.globalService.indexPokemon = this.pageIndex;
 

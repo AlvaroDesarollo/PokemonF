@@ -14,7 +14,6 @@ export class DetailPokemonComponent implements OnInit {
 
   ngOnInit() {
     this.dataPokemon = this.globalService.dataPokemon;
-    console.log('datelles', this.dataPokemon);
   }
 
 }

@@ -8,11 +8,19 @@ import { NopagefoundComponent } from './noPageFound/nopagefound.component';
 import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { AutenticacionGuard } from './services/guards/autenticacion.guard';
 
 @NgModule({
   declarations: [AppComponent, NopagefoundComponent],
-  imports: [BrowserModule, AppRoutingModule, PagesModule, AuthModule, BrowserAnimationsModule, HttpClientModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PagesModule,
+    AuthModule,
+    BrowserAnimationsModule,
+    HttpClientModule
+  ],
+  providers: [AutenticacionGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -33,6 +33,20 @@ export class PeticionesService {
     return this.get(id);
   }
 
+  getLogin(data: any): Observable<any> {
+    const url = 'http://localhost:5020/login';
+    const  body = {
+      user: data.user,
+      password: data.password
+    };
+    return this.httpClient.post(url, body)
+    .pipe(
+      catchError( this.handleError ),
+      map((rta: HttpResponse<any>) => {
+        return rta;
+    }));
+  }
+
   public handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('Petitions Service, an error occurred:', error.error.message);

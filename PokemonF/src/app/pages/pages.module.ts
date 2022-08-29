@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material';
 import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
+import { AutenticacionGuard } from '../services/guards/autenticacion.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.componen
     FormsModule,
     ComponentsModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
   ],
+  providers: [
+    AutenticacionGuard
+  ]
 })
 export class PagesModule {}

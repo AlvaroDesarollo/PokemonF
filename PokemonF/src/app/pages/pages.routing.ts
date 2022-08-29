@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
 import { HomeComponent } from './home/home.component';
 import { PagesComponent } from './pages.component';
 
@@ -9,7 +10,7 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       { path: '', component: HomeComponent },
-      // { path: 'progress', component: ProgressComponent },
+      { path: 'detalle/:pokemon', component: DetailPokemonComponent },
     ],
   },
 ];

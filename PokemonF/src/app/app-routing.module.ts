@@ -7,7 +7,7 @@ import { PagesRoutingModule } from './pages/pages.routing';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
-  //  { path: '**', component: NopagefoundComponent },
+  { path: '**', component: NopagefoundComponent },
 ];
 
 @NgModule({

@@ -1,3 +1,37 @@
-<p>
-  Home
-</p>
+<section class="home-main">
+  <div>
+    <mat-card (click) ="detalle(pokemon)"*ngFor="let pokemon of pokemonPagination" class="example-card">
+      <mat-card-header>
+        <div
+          [style.background-image]="'url(' + pokemon.avatar + ')'"
+          mat-card-avatar
+          class="example-header-image"
+        ></div>
+        <mat-card-title [innerHtml]="pokemon.nombre"></mat-card-title>
+      </mat-card-header>
+      <img
+        class="card-image"
+        mat-card-image
+        [src]="pokemon.image"
+        [alt]="pokemon.nombre"
+      />
+      <mat-card-content class="home-main-button">
+        <p [innerHTML]="'Nombre: ' + pokemon.nombre"></p>
+        <p [innerHTML]="'Alto: ' + pokemon.alto + ' m'"></p>
+        <p [innerHTML]="'Peso: ' + pokemon.peso + ' Kg'"></p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  
+</section>
+
+<section class ="mat-paginator-container">
+  <mat-paginator
+    (page)="handlePageEvent($event)"
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageIndex]="pageIndex"
+  >
+  </mat-paginator>
+</section>

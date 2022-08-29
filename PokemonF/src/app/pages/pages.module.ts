@@ -7,11 +7,15 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
 import { HomeComponent } from './home/home.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material';
+import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     HomeComponent,
+    DetailPokemonComponent,
   ],
   exports: [
     PagesComponent,
@@ -24,6 +28,8 @@ import { HomeComponent } from './home/home.component';
     RouterModule,
     FormsModule,
     ComponentsModule,
+    MatCardModule,
+    MatPaginatorModule
   ],
 })
 export class PagesModule {}

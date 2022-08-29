@@ -1,0 +1,62 @@
+<section>
+  <div>
+    <mat-card [style.background-color]="dataPokemon.color" class="example-card">
+      <mat-card-header>
+        <mat-card-title
+          [innerHtml]="'<h2>' + dataPokemon.nombre + '</h2>'"
+        ></mat-card-title>
+      </mat-card-header>
+      <div class="card-images">
+        <img
+          class="card-image"
+          mat-card-image
+          [src]="dataPokemon.image"
+          [alt]="dataPokemon.nombre"
+        />
+
+        <img
+          class="card-image2"
+          mat-card-image
+          [src]="dataPokemon.avatar"
+          [alt]="dataPokemon.nombre"
+        />
+      </div>
+
+      <mat-card-content class="home-main-button">
+        <div class="card-content-div">
+          <div class="card-content-div-izq">
+            <h3>Caracteristicas Principales:</h3>
+            <p [innerHTML]="'<b>Género:</b> ' + dataPokemon.genero"></p>
+            <p
+              [innerHTML]="'<b>Experiencia: </b>' + dataPokemon.experiencia"
+            ></p>
+            <p [innerHTML]="'<b>Color: </b>' + dataPokemon.color"></p>
+            <p [innerHTML]="'<b>Evolución: </b>' + dataPokemon.evolucion"></p>
+            <p [innerHTML]="'<b>Alto: </b>' + dataPokemon.alto + ' m'"></p>
+            <p [innerHTML]="'<b>Peso: </b>' + dataPokemon.peso + ' Kg'"></p>
+          </div>
+
+          <div class="card-content-div-der">
+            <div>
+              <h3>Habilidades:</h3>
+
+              <p
+                *ngFor="let habilidad of dataPokemon.habilidades"
+                [innerHTML]="habilidad"
+              ></p>
+            </div>
+
+            <div>
+              <h3>Tipo de Pokemon:</h3>
+
+              <p
+                *ngFor="let habilidad of dataPokemon.tipo"
+                [innerHTML]="habilidad"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

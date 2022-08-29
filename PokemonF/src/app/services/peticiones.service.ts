@@ -34,7 +34,7 @@ export class PeticionesService {
   }
 
   getLogin(data: any): Observable<any> {
-    const url = 'http://localhost:5020/login';
+    const url = 'http://localhost:5020/pokemon/v1/login';
     const  body = {
       user: data.user,
       password: data.password

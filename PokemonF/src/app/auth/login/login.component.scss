@@ -1,0 +1,118 @@
+.main-login {
+  display: grid;
+  grid-template-rows: 300px 1fr 35px;
+  width: 100%;
+  background-color: #312e38;
+  height: 100%;
+}
+
+.login-form {
+  // background-color: #c5c2cc;
+  // align-items: center;
+  // justify-content: center;
+  margin: 88px 0;
+  // width: 340px;
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+.form-container {
+  // display: grid;
+  grid-column: 2;
+  justify-items: center;
+  height: 350px;
+  // margin-top: 80px;
+
+}
+
+.form-input {
+  background: #232129;
+  border-radius: 18px;
+  border: 2px solid #232129;
+  padding: 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-input input {
+  // -webkit-flex: 1;
+  // -ms-flex: 1;
+  flex: 1;
+  outline: none;
+  background: transparent;
+  border: 0;
+  color: #f4ede8;
+
+}
+
+.login-button {
+  background: #f8512d;
+  height: 56px;
+  border-radius: 10px;
+  border: 0;
+  padding: 0 16px;
+  width: 100%;
+  font-weight: 500;
+  margin-top: 16px;
+  transition: background-color 0.2s;
+}
+.login-button p {
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+}
+.login-logo {
+  width: 100%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+.logo-div img {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0%;
+}
+
+.logo-div {
+  display: grid;
+  grid-column: 2;
+  justify-items: center;
+  height: 350px;
+  margin-top: 80px;
+  
+}
+
+.logo-div h1 {
+  margin-top: 0%;
+  color: white;
+  // font-family: Montserrat, sans-serif;
+}
+
+.login-footer {
+  width: 100%;
+  height: 35px;
+  color: white;
+  background-color: #6f42c1;
+
+}

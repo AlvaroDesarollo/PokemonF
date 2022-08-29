@@ -1,0 +1,33 @@
+<section class="main-login">
+  <div class="login-logo">
+    <div class="logo-div">
+      <img
+        alt="pokeball"
+        src="../../../assets/images/background/pokeball.svg"
+      />
+      <h1>POKEDEX</h1>
+    </div>
+  </div>
+
+  <div class="login-form">
+    <div class ="form-container">
+      <div class="form-input">
+        <input type="text" [(ngModel)]="loginData.user" placeholder="Usuario" />
+      </div>
+      <div class="form-input">
+        <input
+          type="password"
+          [(ngModel)]="loginData.password"
+          placeholder="Constraseña"
+        />
+      </div>
+
+      <!-- <div class="item"> -->
+      <div class="login-button" (click)="login()"><p>Ingresar</p></div>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="login-footer">
+    <p class="copyright">© {{ year }} Pokémon --- Rocketfy.</p>
+  </div>
+</section>

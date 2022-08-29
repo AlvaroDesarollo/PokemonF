@@ -16,11 +16,14 @@ export class LoginComponent implements OnInit {
   };
   constructor(
     private router: Router,
-    private petitionService: PeticionesService,
-    // public dialog: MatDialog
-  ) {}
+    private petitionService: PeticionesService
+  ) // public dialog: MatDialog
+  {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    localStorage.clear();
+
+  }
   login() {
     if (this.loginData.user && this.loginData.password) {
       const data = {
@@ -31,7 +34,10 @@ export class LoginComponent implements OnInit {
         (rta) => {
           if (rta) {
             localStorage.setItem('TOKEN', 'TOKEN');
-            localStorage.setItem('EXPIRE_IN', moment().format('YYYY-MM-DD HH:mm:ss'));
+            localStorage.setItem(
+              'EXPIRE_IN',
+              moment().format('YYYY-MM-DD HH:mm:ss')
+            );
             return this.router.navigateByUrl('/home');
           }
         },
